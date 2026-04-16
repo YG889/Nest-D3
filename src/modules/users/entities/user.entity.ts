@@ -8,6 +8,7 @@ import {
 } from 'typeorm';
 import { UserRole } from '../../../common/enums/user-role.enum';
 import { Order } from '../../orders/entities/order.entity';
+import { IsEnum } from 'class-validator';
 
 @Entity('users')
 export class User {
@@ -20,7 +21,11 @@ export class User {
   @Column()
   passwordHash: string;
 
-  @Column({ type: 'enum', enum: UserRole, default: UserRole.CUSTOMER })
+  @IsEnum(UserRole)
+  @Column({
+    type: 'text',
+    default: UserRole.CUSTOMER,
+  })
   role: UserRole;
 
   @Column({ type: 'text', nullable: true })

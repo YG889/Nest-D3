@@ -25,9 +25,11 @@ export class Order {
   @Column()
   userId: number;
 
-  @Column({ type: 'enum', enum: OrderStatus, default: OrderStatus.PENDING })
-  status: OrderStatus;
-
+  @Column({
+  type: 'text',
+  default: OrderStatus.PENDING,
+})
+status: OrderStatus;
   @Column({ type: 'decimal', precision: 10, scale: 2, default: 0 })
   totalPrice: string;
 
