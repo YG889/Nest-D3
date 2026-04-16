@@ -32,7 +32,7 @@ Build each task as a new module from scratch. Reuse patterns from existing modul
   - **Must use:** DTOs, custom validation, exception handling with friendly errors.
   - **Test checklist:** duplicate code rejected, invalid discount rejected, admin-only access enforced.
 
-## Scenario 3 - Wishlist Module
+## Scenario 3 - Wishlist Module **implement**
 
 - [ ] Create `wishlist` module where each customer saves favorite products.
   - **Goal:** Practice many-to-many relation and user-scoped data.
@@ -47,7 +47,7 @@ Build each task as a new module from scratch. Reuse patterns from existing modul
   - **Must use:** param pipe for `productId`, DTO if needed, auth guard.
   - **Test checklist:** add/list/remove works; duplicate add blocked.
 
-## Scenario 4 - Addresses Module
+## Scenario 4 - Addresses Module **implement**
 
 - [ ] Create `addresses` module for shipping addresses per user.
   - **Goal:** Practice nested validation and one-to-many relation.
