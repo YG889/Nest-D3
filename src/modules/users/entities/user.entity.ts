@@ -9,6 +9,7 @@ import {
 import { UserRole } from '../../../common/enums/user-role.enum';
 import { Order } from '../../orders/entities/order.entity';
 import { IsEnum } from 'class-validator';
+import { Address } from 'src/modules/addresses/entities/address.entity';
 
 @Entity('users')
 export class User {
@@ -39,4 +40,7 @@ export class User {
 
   @UpdateDateColumn()
   updatedAt: Date;
+
+  @OneToMany(() => Address, (address) => address.user)
+addresses: Address[];
 }

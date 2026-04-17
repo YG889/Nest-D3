@@ -9,6 +9,7 @@ import { ProductsModule } from './modules/products/products.module';
 import { OrdersModule } from './modules/orders/orders.module';
 import { RequestLoggerMiddleware } from './common/middleware/request-logger.middleware';
 import { WishlistModule } from './modules/wishlist/wishlist.module';
+import { AddressesModule } from './modules/addresses/addresses.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { WishlistModule } from './modules/wishlist/wishlist.module';
     ProductsModule,
     OrdersModule,
     WishlistModule,
+    AddressesModule,
   ],
 })
 export class AppModule implements NestModule {
